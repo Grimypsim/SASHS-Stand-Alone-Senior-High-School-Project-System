@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Project: Mission, Vision, Activities</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #2575fc;
+            padding-bottom: 10px;
+        }
+
+        .deped-logo, .grade-logo {
+            width: 80px;
+            cursor: pointer;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            -webkit-mask-image: linear-gradient(black, transparent); /* Added mask effect */
+            mask-image: linear-gradient(black, transparent); /* Added mask effect */
+        }
+
+        .deped-logo:hover, .grade-logo:hover {
+            transform: scale(1.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        section {
+            margin-top: 30px;
+            padding: 20px;
+            border: 10px solid transparent;
+            border-image: url('border.png') 30 stretch;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            animation: colorMovement 3s ease-in-out infinite;
+        }
+
+        @keyframes colorMovement {
+            0% { color: #2575fc; transform: translateX(0); }
+            25% { color: #ff7f50; transform: translateX(5px); }
+            50% { color: #6a11cb; transform: translateX(-5px); }
+            75% { color: #ff00cc; transform: translateX(5px); }
+            100% { color: #2575fc; transform: translateX(0); }
+        }
+
+        .description {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #555;
+            opacity: 0; 
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .activity-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .activity-item {
+            width: 30%;
+            text-align: center;
+            border: 2px solid #2575fc;
+            border-radius: 5px;
+            background-color: #fff;
+            margin: 10px 0;
+            transition: transform 0.3s;
+        }
+
+        .activity-item img {
+            width: 100%;
+            border-radius: 5px 5px 0 0;
+            transition: transform 0.5s ease, opacity 0.5s;
+        }
+
+        .activity-item img:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        .activity-description {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #2575fc;
+        }
+
+        .scaled {
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="deped.png" alt="DepEd Logo" class="deped-logo" id="depedLogo">
+            <h1>Standalone Project System</h1>
+            <img src="deped.jpg" alt="Grade 10 Logo" class="grade-logo" id="gradeLogo">
+        </div>
+        <section class="mission">
+            <h2>Mission</h2>
+            <p class="description">To provide high-quality educational experiences and empower individuals by fostering creativity, critical thinking, and skill development.</p>
+        </section>
+        <section class="vision">
+            <h2>Vision</h2>
+            <p class="description">To be recognized globally as a leader in educational innovation and a catalyst for transformative learning and societal impact.</p>
+        </section>
+    </div>
+</body>
+</html>

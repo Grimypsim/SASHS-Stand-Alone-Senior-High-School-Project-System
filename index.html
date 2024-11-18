@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stand Alone</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #2575fc;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .deped-logo, .grade-logo {
+            width: 60px;
+            cursor: pointer;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .deped-logo:hover, .grade-logo:hover {
+            transform: scale(1.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        section {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            animation: colorMovement 3s ease-in-out infinite;
+        }
+
+        @keyframes colorMovement {
+            0% { color: #2575fc; transform: translateX(0); }
+            25% { color: #ff7f50; transform: translateX(5px); }
+            50% { color: #6a11cb; transform: translateX(-5px); }
+            75% { color: #ff00cc; transform: translateX(5px); }
+            100% { color: #2575fc; transform: translateX(0); }
+        }
+
+        .strand-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .strand-item {
+            width: 30%;
+            padding: 10px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            color: #2575fc;
+            font-weight: bold;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, background-color 0.3s;
+            cursor: pointer;
+            animation: fadeIn 2s forwards;
+            opacity: 0;
+        }
+
+        .strand-item:hover {
+            transform: translateY(-5px);
+            background-color: #2575fc;
+            color: #fff;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .next-page-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .next-page-link a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 8px 18px;
+            background-color: #2575fc;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border: 2px solid #2575fc;
+        }
+
+        .next-page-link a:hover {
+            background-color: #fff;
+            color: #2575fc;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .deped-logo, .grade-logo {
+                width: 50px;
+            }
+
+            .strand-item {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="page1">
+        <div class="header">
+            <img src="deped.png" alt="DepEd Logo" class="deped-logo">
+            <h1>Stand Alone Project System</h1>
+            <img src="deped.jpg" alt="Grade 10 Logo" class="grade-logo">
+        </div>
+        <section class="mission">
+            <h2>Mission</h2>
+            <p class="description">Empowering individuals by fostering creativity, critical thinking, and skill development through high-quality educational experiences.</p>
+        </section>
+        <section class="vision">
+            <h2>Vision</h2>
+            <p class="description">To be globally recognized as a leader in educational innovation, creating transformative learning and societal impact.</p>
+        </section>
+        <section class="activities">
+            <h2>Activities</h2>
+            <div class="strand-container">
+                <div class="strand-item">
+                    <img src="flagceremony.jpg" alt="Flag Ceremony" width="100%" height="auto">
+                    <p>Flag Ceremony</p>
+                </div>
+                <div class="strand-item">
+                    <img src="image.jpg" alt="Image" width="100%" height="auto">
+                    <p>Special Program</p>
+                </div>
+                <div class="strand-item">
+                    <img src="teaching.jpg" alt="Teaching" width="100%" height="auto">
+                    <p>Teaching Session</p>
+                </div>
+            </div>
+        </section>
+        <div class="next-page-link">
+            <a href="page2.html">Next</a>
+        </div>
+    </div>
+
+    <div class="container" id="page2" style="display: none;">
+        <div class="header">
+            <img src="deped.png" alt="DepEd Logo Left" class="logo">
+            <h1>Stand Alone Project System</h1>
+            <img src="deped.jpg" alt="Grade 10 Logo Right" class="logo">
+        </div>
+        <section>
+            <h2>Explore More</h2>
+            <p class="description">Discover more about our programs, faculty, and achievements on this page.</p>
+        </section>
+        <div class="next-page-link">
+            <a href="index.html">Back</a>
+        </div>
+    </div>
+</body>
+</html>
